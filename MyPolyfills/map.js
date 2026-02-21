@@ -10,4 +10,5 @@ Array.prototype.myMap = function(callback, thisArg) {
   
   return result;
 };
+//examples
 console.log([1,2].myMap((ele)=> ele*2))
