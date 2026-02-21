@@ -9,7 +9,7 @@ Array.prototype.myReducer = function(callback,initialValue){
         startIndex = 1;
     }
     for (let i = startIndex; i < this.length; i++) {
-      if (i in this) {
+      if (Object.keys(this).includes(String(i))) {
           accumulator= callback(accumulator,this[i],i,this)
       }
     }

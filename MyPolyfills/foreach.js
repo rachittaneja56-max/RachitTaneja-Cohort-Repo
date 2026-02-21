@@ -1,6 +1,6 @@
 Array.prototype.myForEach = function(callback,thisArg){
       for (let i = 0; i < this.length; i++) {
-        if (i in this) callback.call(thisArg,this[i],i,this)
+        if (Object.keys(this).includes(String(i))) callback.call(thisArg,this[i],i,this)
       }
 }
 // Example

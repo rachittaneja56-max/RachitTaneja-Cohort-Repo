@@ -2,7 +2,7 @@ Array.prototype.myFilter = function(callback, thisArg) {
   const result = []; 
   
   for (let i = 0; i < this.length; i++) {
-    if (i in this) {
+    if (Object.keys(this).includes(String(i))) {
        const isMatch = callback.call(thisArg, this[i],i,this)
        if(isMatch) result.push(this[i])
     }
